@@ -12,7 +12,14 @@ export const handleGmail = async (auth: OAuth2Client) => {
     const RandomBody = await getRandomBody(emailList);
     const RandomSubject = await getRandomSubject(emailList);
     for (let i = 0; i < emailList.length; i++) {
-        await createEmail(auth, 'me', emailList, RandomSubject[0], RandomBody[0], i);
+        await createEmail(
+            auth,
+            'me',
+            emailList,
+            RandomSubject[0],
+            RandomBody[0],
+            i
+        );
     }
 };
 
