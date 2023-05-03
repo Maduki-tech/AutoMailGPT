@@ -1,4 +1,4 @@
-export interface EmailData {
+export type EmailData = {
     Id: number
     Email: string
     Name: string

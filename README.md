@@ -46,6 +46,8 @@ This tool has only 2 Permissions.
 2. `https://www.googleapis.com/auth/gmail.compose`,
     - This is to create Drafts
     - Read more [ here ]( https://developers.google.com/gmail/api/guides/sending?hl=de )
+3. `https://www.googleapis.com/auth/spreadsheets.readonly`
+    - Able to read table from google sheets
 
 ---
 # Important to notice.

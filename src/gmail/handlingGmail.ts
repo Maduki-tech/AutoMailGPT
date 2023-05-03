@@ -8,19 +8,19 @@ import { getRandomSubject } from '../emailHandler/getRandomSubject';
 type OAuth2Client = typeof GoogleApis.prototype.auth.OAuth2.prototype;
 
 export const handleGmail = async (auth: OAuth2Client) => {
-    const emailList = await getEmailList();
-    const RandomBody = await getRandomBody(emailList);
-    const RandomSubject = await getRandomSubject(emailList);
-    for (let i = 0; i < emailList.length; i++) {
-        await createEmail(
-            auth,
-            'me',
-            emailList,
-            RandomSubject[0],
-            RandomBody[0],
-            i
-        );
-    }
+    const emailList = await getEmailList(auth);
+    // const RandomBody = await getRandomBody(emailList);
+    // const RandomSubject = await getRandomSubject(emailList);
+    // for (let i = 0; i < emailList.length; i++) {
+    //     await createEmail(
+    //         auth,
+    //         'me',
+    //         emailList,
+    //         RandomSubject[0],
+    //         RandomBody[0],
+    //         i
+    //     );
+    // }
 };
 
 const createEmail = async (
